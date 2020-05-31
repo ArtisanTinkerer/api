@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\Http;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 
+use App\Book;
+
 
 class BooksTest extends TestCase
 {
@@ -34,19 +36,28 @@ class BooksTest extends TestCase
      */
     public function can_create_book()
     {
-        $name = $this->faker->name();
-        $title = $this->faker->sentence(3);
+        $book = make(Book::class);
 
-        $postArray = ['author'=>$name,'title'=>$title];
-
-        $this->post('/api/books',$postArray)
+        $this->post(route('books.store'),$book->toArray())
         ->assertStatus(200);
 
-        $this->assertDatabaseHas('books',$postArray);
+        $this->assertDatabaseHas('books',$book->toArray());
     }
 
+    /**
+     *
+     *@test
+     */
+    public function can_delete_book()
+    {
+        $book = create(Book::class);
 
-    //delete
+        $this->delete(route('books.destroy',$book));
+
+        $this->assertDatabaseMissing('books',$book->toArray());
+
+
+    }
 
     //show
 
