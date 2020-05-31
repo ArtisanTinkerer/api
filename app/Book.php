@@ -6,6 +6,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class Book extends Model
 {
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'title', 'author'
+    ];
+
     public function index()
     {
         dd('the book index');
