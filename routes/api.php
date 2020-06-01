@@ -23,12 +23,7 @@ use Illuminate\Support\Facades\Route;
 Route::post('/login', 'AuthController@login');
 
 Route::middleware(['auth:sanctum'])->group(function () {
-
     Route::apiResource('books', 'BookController');
-
-    //Route::post('/books', 'BookController@store');
-    //Route::get('/books', 'BookController@index');
-
 });
 
 /*Route::middleware('auth:api')->get('/user', function (Request $request) {

@@ -3,8 +3,6 @@
 namespace Tests\Feature;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Foundation\Testing\WithoutMiddleware;
-use Illuminate\Support\Facades\Http;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 
@@ -16,19 +14,6 @@ class BooksTest extends TestCase
 
     use WithFaker;
     use RefreshDatabase;
-    use WithoutMiddleware;
-    /**
-     * A basic test example.
-     *
-     * @return void
-     */
-    public function testBasicTest()
-    {
-        $response = $this->get('/');
-
-        $response->assertStatus(200);
-    }
-
 
     /**
      *
@@ -51,16 +36,51 @@ class BooksTest extends TestCase
     public function can_delete_book()
     {
         $book = create(Book::class);
-
         $this->delete(route('books.destroy',$book));
 
         $this->assertDatabaseMissing('books',$book->toArray());
 
+    }
+
+    /**
+     *
+     *@test
+     */
+    public function can_show_book()
+    {
+        $book = create(Book::class);
+
+        $this->get(route('books.show',$book))
+            ->assertJsonFragment(['id' => $book->id]);
+    }
+
+    /**
+     *
+     *@test
+     */
+    public function can_update_book()
+    {
+        $book = create(Book::class);
+
+        $this->put(route('books.update',$book),['author' => 'changed','title'=>$book->title]);
+
+        $this->assertDatabaseHas('books',['author'=>'changed']);
 
     }
 
-    //show
 
-    //list all
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }

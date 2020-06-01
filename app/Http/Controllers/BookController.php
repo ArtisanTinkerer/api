@@ -3,26 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreBookRequest;
-use Illuminate\Http\Request;
 use App\Book;
 
 class BookController extends Controller
 {
-/*
-+--------+-----------+---------------------+---------------+------------------------------------------------------------
-| Domain | Method    | URI                 | Name          | Action
-+--------+-----------+---------------------+---------------+------------------------------------------------------------
-|        | GET|HEAD  | /                   |               | Closure
-|        | GET|HEAD  | api/books           | books.index   | App\Http\Controllers\BookController@index
-|        | POST      | api/books           | books.store   | App\Http\Controllers\BookController@store
-|        | GET|HEAD  | api/books/{book}    | books.show    | App\Http\Controllers\BookController@show
-|        | PUT|PATCH | api/books/{book}    | books.update  | App\Http\Controllers\BookController@update
-|        | DELETE    | api/books/{book}    | books.destroy | App\Http\Controllers\BookController@destroy
-|        | POST      | api/login           |               | App\Http\Controllers\AuthController@login
-|        | GET|HEAD  | sanctum/csrf-cookie |               | Laravel\Sanctum\Http\Controllers\CsrfCookieController@show
-+--------+-----------+---------------------+---------------+------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-*/
-
 
     /**
      * Display a listing of the resource
@@ -76,7 +60,5 @@ class BookController extends Controller
     {
         $book->delete();
     }
-
-
 
 }
