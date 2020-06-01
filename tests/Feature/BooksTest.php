@@ -69,6 +69,18 @@ class BooksTest extends TestCase
     }
 
 
+    /**
+     *
+     *@test
+     */
+    public function can_get_books_index()
+    {
+        $book = create(Book::class);
+
+        $this->get(route('books.index'))
+            ->assertJsonFragment(['id' => $book->id]);
+    }
+
 
 
 
