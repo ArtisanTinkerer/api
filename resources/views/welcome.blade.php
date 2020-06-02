@@ -12,11 +12,10 @@
     </head>
     <body>
 
-
-    <div class="bg-white rounded shadow border p-6 w-64">
-        <h5 class="text-3xl font-bold mb-4 mt-0">Forbidden</h5>
-        <p class="text-gray-700 text-sm">You need to register before you can use this application.</p>
+    <div id="app">
+        <router-view> </router-view>
     </div>
 
+    <script src="/js/app.js"></script>
     </body>
 </html>
