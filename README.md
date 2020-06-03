@@ -1,5 +1,6 @@
-<p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
+
+![alt text](https://github.com/ArtisanTinkerer/api/[master]/pulic/images/logo.png?raw=true)
 
 
 ## A sample Laravel/Vue SPA Application
