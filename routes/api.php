@@ -18,9 +18,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::post('/login', 'AuthController@login');
 
-Route::middleware(['auth:sanctum'])->group(function () {
+//Route::middleware(['auth:sanctum'])->group(function () {
     Route::apiResource('books', 'BookController');
-});
+//});
 
 
 Route::get('stats', 'BookController@stats');

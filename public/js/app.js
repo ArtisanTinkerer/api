@@ -1929,7 +1929,37 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-/* harmony default export */ __webpack_exports__["default"] = ({});
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      books: []
+    };
+  },
+  created: function created() {
+    var _this = this;
+
+    axios.get('/api/books').then(function (response) {
+      _this.books = response.data;
+    });
+  }
+});
 
 /***/ }),
 
@@ -2504,11 +2534,23 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "h1",
-    { staticClass: "font-normal text-3xl text-grey-darkest leading-none mb-8" },
-    [_vm._v("Write Reviews")]
-  )
+  return _c("div", [
+    _c(
+      "h1",
+      {
+        staticClass: "font-normal text-3xl text-grey-darkest leading-none mb-8"
+      },
+      [_vm._v("Read Reviews")]
+    ),
+    _vm._v(" "),
+    _c(
+      "ul",
+      _vm._l(_vm.books, function(book) {
+        return _c("li", { domProps: { textContent: _vm._s(book.title) } })
+      }),
+      0
+    )
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
