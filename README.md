@@ -1,6 +1,6 @@
 
 
-![alt text](https://github.com/ArtisanTinkerer/api/[master]/pulic/images/logo.png?raw=true)
+![alt text](/public/images/logo.png?raw=true)
 
 
 ## A sample Laravel/Vue SPA Application
