@@ -1,18 +1,30 @@
-import Home from './components/Home';
-import About from './components/About';
+import Read from './components/Read';
+import Write from './components/Write';
+import NotFound from './components/NotFound';
+import Stats from './components/Stats';
 
 export default {
     mode: 'history',
+    linkActiveClass: 'font-bold',
     routes: [
         {
-            path: '/',
-            component: Home
+            path: '*',
+            component: NotFound
+
+
         },
         {
-            path: '/about',
-            component: About,
-            name: 'about'
+            path: '/read',
+            component: Read
+        },
+        {
+            path: '/write',
+            component: Write
 
+        },
+        {
+            path: '/stats',
+            component: Stats
 
         }
     ]

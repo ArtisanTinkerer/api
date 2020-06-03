@@ -23,3 +23,8 @@ Route::middleware(['auth:sanctum'])->group(function () {
 });
 
 
+Route::get('stats', 'BookController@stats');
+
+
+
+

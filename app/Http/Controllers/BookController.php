@@ -61,4 +61,17 @@ class BookController extends Controller
         $book->delete();
     }
 
+
+    /**
+     * Return the stats for the stats component
+     */
+    public function stats()
+    {
+        $reviews = Book::all()->count();
+        $books = Book::all()->count();
+
+        return response()->json(['reviews' => $reviews,'books' => $books]);
+
+    }
+
 }

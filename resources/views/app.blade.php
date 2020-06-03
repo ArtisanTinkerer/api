@@ -8,15 +8,15 @@
         <title>Book Shorts</title>
 
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+
 
     </head>
-    <body>
+    <body class="bg-white">
 
 
     <div id="app">
 
-        <div class="container mx-auto">
+        <div class="container px-8">
 
             <header class="py-6">
                 <h1>
@@ -26,23 +26,25 @@
             </header>
 
             <main class="flex">
-                <aside class="w=1/5">
+                <aside class="w=1/5 pt-8">
 
                     <section class="mb-5">
                         <h5 class="uppercase font-bold">Reviews</h5>
-                        <ul>
+
+                        <ul class="list-reset">
                             {{--These are links to components--}}
-                            <li><router-link to="/">Home</router-link></li>
-                            <li><router-link :to="{ name: 'about'}">About</router-link></li>
+                            <li class="text-sm leading-loose"><router-link class = "text-black"  to="/read">Read</router-link></li>
+                            <li class="text-sm leading-loose"><router-link class = "text-black"  to="/write">Write</router-link></li>
                         </ul>
+
                     </section>
 
 
                     <section class="mb-5">
                         <h5 class="uppercase font-bold">Other stuff</h5>
                         <ul>
-                            <li><router-link to="/">Home</router-link></li>
-                            <li><router-link :to="{ name: 'about'}">About</router-link></li>
+                            <li class="text-sm leading-loose"><router-link class = "text-black"  to="/stats">Stats</router-link></li>
+
                         </ul>
                     </section>
 

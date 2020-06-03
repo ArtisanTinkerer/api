@@ -2,7 +2,8 @@
 
 use Illuminate\Database\Seeder;
 
-class DatabaseSeeder extends Seeder
+
+class BooksSeeder extends Seeder
 {
     /**
      * Seed the application's database.
@@ -11,9 +12,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-         $this->call([
-             UsersSeeder::class,
-             BooksSeeder::class
-             ]);
+        factory(App\Book::class, 50)->create();
     }
 }
