@@ -2,6 +2,7 @@
 
 ![alt text](logo.png?raw=true)
 
+## One sentence book reviews.
 
 ## A sample Laravel/Vue SPA Application
 
