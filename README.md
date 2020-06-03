@@ -1,6 +1,6 @@
 
 
-![alt text](/public/images/logo.png?raw=true)
+![alt text](logo.png?raw=true)
 
 
 ## A sample Laravel/Vue SPA Application
