@@ -25,6 +25,20 @@
             return {books: []};
         },
         created() {
+
+            // Add a request interceptor
+            axios.interceptors.request.use(
+                config => {
+                    //hardcode this for now, do it the Sanctum way later
+                    const token = '2|PuTLcHvrZCIFzLfsjTBDO0jjoX6j1i7cFheKQdfmrGmoDMw9XuEaDNJU6XUhZ9etWZengK7NehUrCTz3';
+                    config.headers['Authorization'] = 'Bearer ' + token;
+                    return config;
+                },
+                error => {
+                    Promise.reject(error)
+                });
+
+
             axios.get('/api/books')
                 .then(response => {
                     this.books = response.data;

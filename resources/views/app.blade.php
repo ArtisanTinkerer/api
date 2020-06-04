@@ -52,7 +52,7 @@
 
                 </aside>
 
-                <div class="primary flex-1">
+                <div class="primary flex-1 pl-5">
                     <router-view> </router-view>
                 </div>
             </main>
