@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreBookRequest;
 use App\Book;
+use App\Http\Resources\Books as BookResource;
 
 class BookController extends Controller
 {
@@ -14,7 +15,7 @@ class BookController extends Controller
      */
     public function index()
     {
-        return Book::all();
+        return BookResource::collection(Book::all());
     }
 
     /**
@@ -36,7 +37,7 @@ class BookController extends Controller
      */
     public function show(Book $book)
     {
-        return $book;
+        return new BookResource($book);
     }
 
     /**
