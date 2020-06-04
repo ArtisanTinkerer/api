@@ -2,7 +2,7 @@ import Read from './components/Read';
 import Write from './components/Write';
 import NotFound from './components/NotFound';
 import Stats from './components/Stats';
-import Counter from "./components/Counter";
+import Todos from "./components/Todos";
 
 export default {
     mode: 'history',
@@ -29,8 +29,8 @@ export default {
 
         },
         {
-            path: '/counter',
-            component: Counter
+            path: '/todos',
+            component: Todos
 
         }
     ]

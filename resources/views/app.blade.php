@@ -44,7 +44,7 @@
                         <h5 class="uppercase font-bold">Other stuff</h5>
                         <ul>
                             <li class="text-sm leading-loose"><router-link class = "text-black"  to="/stats">Stats</router-link></li>
-                            <li class="text-sm leading-loose"><router-link class = "text-black"  to="/counter">Counter</router-link></li>
+                            <li class="text-sm leading-loose"><router-link class = "text-black"  to="/todos">Todos</router-link></li>
 
                         </ul>
                     </section>

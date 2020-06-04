@@ -14,9 +14,10 @@ Vue.use(Vuex)
 
 import store from './store';
 
+Vue.component('todo', require('./components/Todo'));
 
 let app = new Vue({
     el: '#app',
-    store: new Vuex.Store(store),
+    store,
     router: new VueRouter(routes)
 });
