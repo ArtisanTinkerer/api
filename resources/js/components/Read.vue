@@ -41,7 +41,7 @@
 
             axios.get('/api/books')
                 .then(response => {
-                    this.books = response.data;
+                    this.books = response.data.data;
                 })
 
         }
