@@ -10,6 +10,16 @@ export default new Vuex.Store({
             { body: 'Buy groceries', done: true },
             { body: 'Finish homework', done: false }
         ]
+    },
+
+    mutations: {
+        completeAll (state) {
+           state.todos.forEach(todo => todo.done = true);
+        },
+
+        deleteTodo (state, todo) {
+            state.todos.splice(state.todos.indexOf(todo))
+        }
     }
 })
 

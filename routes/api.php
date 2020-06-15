@@ -20,11 +20,9 @@ Route::post('/login', 'AuthController@login');
 
 Route::middleware(['auth:sanctum'])->group(function () {
     Route::apiResource('books', 'BookController');
-
-    Route::get('stats', 'BookController@stats');
 });
 
-
+Route::get('stats', 'BookController@stats');
 
 
 

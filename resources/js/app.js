@@ -14,7 +14,11 @@ Vue.use(Vuex)
 
 import store from './store';
 
+Vue.component('simple', require('./components/Simple.vue').default);
+
 Vue.component('todo', require('./components/Todo'));
+
+
 
 let app = new Vue({
     el: '#app',
